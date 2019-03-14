@@ -1,0 +1,51 @@
+<ACLs> An access control scheme offering both confidentiality and integrity assurances.
+The scheme is named after one of the data structures needed to implement. Access Control Lists.
+<Additional Statement Attack> A flavor of SQL injection where the attacker is able to send additional statements
+to the SQL interpreter other than the author anticipated.
+<Adware> A program that serves advertisements and redirects web traffic in an effort to
+influence user shopping behavior.
+<Affected Users> One component of the D.R.E.A.D. system describing what percentage of likely
+users would be vulnerable to a given attack.
+<Agent> A presence on a system. An agent is also known as a digital identity, an online
+persona, an account, or even a login. A system can represent an agent in a variety
+of ways, from an account ID to ticket (a key representing a single session on the
+system).
+<Applicant> A principal who is seeking to be a subscriber. Note that the system policy may
+preclude some applicants from becoming a subscriber. Most systems have a
+mechanism for an applicant to become a subscriber
+<ARC Injection> A type of memory injection vulnerability where the attacker alters the execution
+of the program by overwriting a function pointer.
+<Array Index Vulnerability> A form of memory injection where the attacker can achieve arbitrary memory
+overwrite because an array index value is not properly validated.
+<ASCII-Unicode Vulnerability> A type of memory injection where the attacker is able to overcome normal
+bounds checking by exploiting a bug in the way the size of a buffer is computed.
+<Asset> Something of value that a defender wishes to protect and the attacker wishes to
+possess.
+<Attack> A risk realized. In other words, a vulnerability exists in the system and an attacker
+has exploited it.
+<Attacker’s Advantage> A collection of advantages that attackers have over defenders, including 1)
+choosing the time of the attack, 2) choosing to attack the weakest point, 3) not
+being bound by the law, and 4) choosing unknown attacks.
+<Authentication> Authentication is the process of tying a subscriber to an agent. This occurs when
+a claimant presents the system with credentials. The authentication system then
+verifies the credentials, activates the corresponding agent, and gives the
+subscriber the ability to control the agent.
+<Authority Attack> A social engineering attack where on appears to hold a higher rank or influence than one actually possesses. 
+<Availability> One of the three fundamental security assurances. The availability assurance is defined by U.S. law as "ensuring timely and reliable access to and use of information. 
+<Back Door> A mechanism allowing an individual to enter a system through an unintended and illicit avenue. 
+<Bell La-Padula> An access control scheme offering confidentiality assurances.
+<Biba> An acces control scheme offereing integrity assurances.
+<Biometrics> A type of "who you are" authentication where the system takes a direct measurement from the user to determin authenticity. 
+<Black Hat> Black hats are individuals who attempt to break the security of a system without legal permission. 
+<Bomb> A program designed to deliver a malicious payload at a pre-specified time or event. 
+<Botware> A program that controls a system from over a network. 
+<Caesar Cipher> A simple substitution enryption algorithm where letters are shifted down the alphabet to produce ciphertext. 
+<Canon> One component of the homograph problem, the canon is a unique name or symbol representing a homograph set. Another name for a canon is a canonical token. 
+<Canonicalization Function> One component of the homograph problem, the canonicalization function is a function that returns a canon from a given encoding. 
+<Chosen Plaintext Attack> A type of attack on an enryption key where the attacker Eve can both select the plaintext to feed into the algorithm and see the resulting ciphertext.
+<C.I.A> The three assurances: confidentiality, integrity, and availability. In many ways C.I.A. defines computer security. 
+<Ciphertext> Human-unreadable text that has been transformed by an encryption algorithm. Also known as a cryptogram. 
+<Ciphertext Only Attack> A type of attack on an encryption key where the attacker Eve can only see the resulting ciphertext, not having access to the plaintext which generated the ciphertext. 
+<Claimant> A principal claiming to be a member of the subscriber set. Before becoming a subscriber, the claimant's identity needs to be verified. 
+<Codebook> A type of encryption method where each token in a plaintext message is translated into a a ciphertext based on a very large key. 
+
