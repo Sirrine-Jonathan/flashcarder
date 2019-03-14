@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <style>
+      #header {
+         display: inline-block;
+         text-align: center;
+      }
+
+      #container {
+         display: flex; 
+         flex-direction: row;
+         justify-content: center;
+         align-items: stretch;
+         width: 100%;
+      }
+      
+      .box {
+         flex: 1;
+         margin: 2%;
+      }
+
+      #textarea {
+         width: 90%;
+         height: 700px;
+      }
+
+      #displayArea {
+         height: 700px;
+         max-height: 700px;
+         overflow-y: scroll;
+      }
+
+      #cardFlipper {
+         display: none; 
+         flex-direction: row;
+         justify-content: center;
+         align-items: stretch;
+         width: 100%;
+      }
+
+      #cardBox {
+         width: 40%;
+         text-align: center;
+         padding: 3%;
+      }
+
+      #currentCard {
+         border:1px solid black;
+         text-align: left;
+         padding: 3%;
+      }
+   </style>
+</head>
+<body>
+   <div id="header">
+      <h1>Flash Card Maker</h1>
+   </div>
+   <div id="container" >
+      <div class="box">
+         <textarea id="textarea"><term> definition</textarea><br />
+         <button id="process">Process</button>
+         <button id="save">Save</button>
+         <button id="load">Load</button>
+         <button id="clear">Clear</button>
+      </div>
+      <div class="box">
+         <div id="displayArea" ></div>
+         <button id="run">Run</button>
+      </div>
+   </div>
+   <div id="cardFlipper">
+      <div id="cardBox">
+         <div id="currentCard"></div><br />
+         <button id="prev">Prev</button>
+         <button id="flip">Flip</button>
+         <button id="next">Next</button>  
+         <button id="quit">Quit</button>
+      </div>
+   </div>
+<script>
+
+   // local copy of term definitions map
+   let termDefMap = {};
+   window.onload = () => {
+      let ls = window.localStorage;
+      if (ls.getItem('flashCardTerms')){
+         termDefMap = JSON.parse(ls.getItem('flashCardTerms'));
+         load(termDefMap);
+      }
+   }
+
+   // process functionality
+   let b = document.getElementById('process');
+   b.addEventListener("click", (e) => {
+      let ta = document.getElementById('textarea');
+      let text = ta.value;
+      let len = text.length;
+      for (let i = 0; i < len; i++){
+         if (text[i] == "<"){
+            let newTerm = "";
+            let t = i + 1;
+            while (text[t] != ">"){
+               newTerm += text[t];
+               t++;
+            }
+            let newDef = "";
+            let d = t + 1;
+            while (text[d] != "<" && d < len){
+               newDef += text[d];
+               d++;
+            }
+            termDefMap[newTerm] = newDef;
+            i = d - 1;
+         }
+      }
+      display(termDefMap);
+   });
+
+   // save functionality
+   let s = document.getElementById('save');
+   s.addEventListener('click', () => {
+      save(termDefMap);
+   })
+   const save = (termDefMap) => {
+      let ls = window.localStorage;
+      ls.setItem('flashCardTerms', JSON.stringify(termDefMap));
+   }
+
+   // load functionality
+   let l = document.getElementById('load');
+   l.addEventListener('click', () => {
+      load();
+   })
+   const load = () => {
+      let ls = window.localStorage;
+      termDefMap = JSON.parse(ls.getItem('flashCardTerms'));
+      display(termDefMap);
+      fillTextArea(termDefMap);
+   }
+   const fillTextArea = (termDefMap) => {
+      let ta = document.getElementById('textarea');
+      let str = "";
+      for (let term in termDefMap){
+         str += "<" + term + ">" + termDefMap[term];
+      }
+      ta.value = str;
+   }
+
+   // clear functionality
+   let c = document.getElementById('clear');
+   c.addEventListener('click', () => {
+      clear();
+   })
+   const clear = () => {
+      let ta = document.getElementById('textarea');
+      ta.value = "<term> definition";
+   }
+
+   /*
+      Card Reading Globals
+   */
+   let currentCardIndex = 0;
+   let cards = [];
+   let side = "term";
+
+   // run functionality
+   let r = document.getElementById('run');
+   r.addEventListener('click', () => {
+      run();
+   })
+   const run = () => {
+      document.getElementById('container').style.display = 'none';
+      document.getElementById('cardFlipper').style.display = 'flex';
+
+      // start reading cards
+      for (term in termDefMap){
+         let card = {
+            "term": term,
+            "definition": termDefMap[term]
+         }
+         cards.push(card);
+      }
+      displayCard();
+   }
+
+   // quit functionality
+   let q = document.getElementById('quit');
+   q.addEventListener('click', () => {
+      document.getElementById('container').style.display = 'flex';
+      document.getElementById('cardFlipper').style.display = 'none';
+   });
+
+   const displayCard = () => {
+      let currentCard = document.getElementById('currentCard');
+      if (side == 'term')
+         currentCard.innerHTML = '<b>' + cards[currentCardIndex][side] + '</b>';
+      else 
+         currentCard.innerHTML = '<b>' + cards[currentCardIndex]['term'] + '</b><br /><br />' + cards[currentCardIndex][side];
+   }
+
+   document.getElementById('flip').addEventListener('click', () => {
+      flipCard();
+   })
+   const flipCard = () => {
+      if (side == 'term')
+         side = 'definition';
+      else 
+         side = 'term';
+      displayCard();
+   }
+
+   document.getElementById('next').addEventListener('click', () => {
+      nextCard();
+      side = 'term';
+      displayCard();
+   })
+   const nextCard = () => {
+      let nextIndex = currentCardIndex + 1;
+      if (nextIndex >= cards.length)
+         nextIndex = 0;
+      currentCardIndex = nextIndex;
+   }
+
+   document.getElementById('prev').addEventListener('click', () => {
+      prevCard();
+      side = 'term';
+      displayCard();
+   })
+   const prevCard = () => {
+      let nextIndex = currentCardIndex - 1;
+      if (nextIndex < 0)
+         nextIndex = cards.length - 1;
+      currentCardIndex = nextIndex;
+   }
+   // display functionality
+   const display = (termDefMap) => {
+      console.log(termDefMap);
+      let area = document.getElementById('displayArea');
+      let html = "";
+      for (let term in termDefMap){
+         html += "<h5>" + term + "</h5>" + "<span>" + termDefMap[term] + "</span>";
+      }
+      area.innerHTML = html;
+   }
+
+
+   document.addEventListener('keydown', (e) => {
+      console.log(e);
+      switch(e.code){
+         case 'ArrowLeft':
+            prevCard();
+            side = 'term';
+            displayCard();
+         break;
+         case 'ArrowRight':
+            nextCard();
+            side = 'term';
+            displayCard();
+         break;
+         case 'Space':
+            flipCard();
+         break;
+         case 'KeyQ':
+            document.getElementById('container').style.display = 'flex';
+            document.getElementById('cardFlipper').style.display = 'none';
+         break;
+      }
+   });
+
+</script>
+</body>
+</html>
