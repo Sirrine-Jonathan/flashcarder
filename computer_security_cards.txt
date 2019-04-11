@@ -1,4 +1,4 @@
-<ACLs> An access control scheme offering both confidentiality and integrity assurances.
+﻿<ACLs> An access control scheme offering both confidentiality and integrity assurances.
 The scheme is named after one of the data structures needed to implement. Access Control Lists.
 <Additional Statement Attack> A flavor of SQL injection where the attacker is able to send additional statements
 to the SQL interpreter other than the author anticipated.
@@ -48,4 +48,147 @@ subscriber the ability to control the agent.
 <Ciphertext Only Attack> A type of attack on an encryption key where the attacker Eve can only see the resulting ciphertext, not having access to the plaintext which generated the ciphertext. 
 <Claimant> A principal claiming to be a member of the subscriber set. Before becoming a subscriber, the claimant's identity needs to be verified. 
 <Codebook> A type of encryption method where each token in a plaintext message is translated into a a ciphertext based on a very large key. 
+<Code Segment> One of the three segments in memory (the other two being the stack and the
+heap), the code segment is where the executable code for a program resides.
+<Comment Attack> A type of SQL injection attack where the author’s intended statement is
+simplified through the use of comments.
+<Commitment Attack> A social engineering attack that preys on people’s desire to follow through with
+promises, even if the promise was not deliberately made.
+<Computer Security> The process of confidentiality, integrity, and availability assurances to users or
+clients of information systems.
+<Confidentiality> One of the three fundamental security assurances. The confidentiality assurance
+is defined by U.S. law as “preserving authorized restrictions on access and
+disclosure, including means for protecting personal privacy and proprietary
+information”.
+<Conformity Attack> A special type of commitment attack where the attacker strives to make a victim
+adhere to social norms in an effort to influence him/her.
+<Cookie> A session-layer mechanism built into web browsers.
+<Countermeasures> One of the mitigation strategies involving detecting an attack and then
+strengthening the prevention mechanisms.
+<CPU Starvation> An application-layer attack that occurs when the attacker tricks a program into
+performing an expensive operation consuming many CPU cycles.
+<Cracker> One who enjoys the challenge of black hat activities.
+<Credential> The artifact a claimant presents to the system to verify that they are a subscriber.
+In the simplest case, credentials could be a username and password pair
+<Cyberpunk> A contemporary combination of hacker, cracker, and phreak.
+<D.A.D.> A system of describing threats comprising disclosure, alteration, and denial.
+These correspond to the three assurances of confidentiality, integrity, and
+availability (C.I.A.).
+<Damage Potential> One component of the D.R.E.A.D. system describing how bad things could be if
+an attack succeeds.
+<Data Flow Diagram> A type of diagram useful for designing computing systems at the very large scale.
+It is also commonly used to help security engineers isolate the critical parts of a
+system for the purpose of conducting a more thorough analysis.
+<Deflection> One of the mitigation strategies involving misdirecting a potential attacker away
+from an asset or convincing an attacker that a failed attack was successful.
+<Demigod> Experienced cracker, typically producing tools and describing techniques for use
+of others.
+<Denial of Service> An attack on the availability assurance. This is also known as D.o.S.
+<Deterrence> ONe of the mitigation strategies involving convincing a potential attacker that an attack is not worth the effort. 
+<Detection> One of the mitigation strategies involving observing that an attack has happened or is currently underway. 
+<Digital Identity> A unique representation of a subject on a given system. 
+<Diffusion of Responsibility Attack> A special form of an authority attack where an attacker manipulates the decision making process 
+from one that is normally individual to one that is collective.
+<Direct Script Injection> A flavor of script injection where malicious code is sent from the attacker directly to the victim computer.
+<Discoverability> One component of the D.R.E.A.D. system describing the likelihood that an attacker would be able to discover that a given 
+vulnerability exists. 
+<D.R.E.A.D.> A system for describing and quantifying the importance of a threat. It is an elaboration of the traditional
+severity/likelihood system commonly used. 
+<Enrollment> The process of an applicant becoming a subscriber. For this to occur, an agent is created on the system representing
+the new subscriber. The system also presents the new subscriber with credentials with which the subscriber can authenticate. 
+<Encryption> A presentation-layer service providing confidentiality and integrity assurances.
+<Explitability> One component of the D.R.E.A.D. system describing how much effort is required to carry out a given attack. 
+<FTP Injection> A flavor of command injection where the attacker is able to send different commands to the FTP interpreter than the author
+anticipated.
+<Function Pointer> A pointer to a fucnction (as opposed to a pointer to data). 
+<Hacktivist> An individual hacking for the purpose of sending a message or advancing a political agenda. 
+<Heap Injection> A type of memory injection where the attacker is able to achieve arbitrary memory overwrite by replacing the MCB in the heap with malicious data. 
+<Heap Segment> One of the three segments in memory (the other two being the stack and the code), the heap segment is where dynamically allocated variables reside. 
+<Homograph> Two words that visually appear the same but consist of different characters. 
+<Homograph Set> One component of the homograph problem, the homograph set is a collection of encodings that are perceived to be the same by a given observer. 
+<Human Interactive Proofs> A form of authentication where the system attempts to ascertain whether a given user is a human as opposed to another computer.
+<Identity Manager> The collection of processes and components used to represent digital identities, handle enrollment, authenticate, and provide similar related services.
+<Impersonation Attack> A special form of authority attack where an attacker assumes the role of one who possesses rank or authority. 
+<Information Disclosure> An attack on the confidentiality assurance. 
+<Inoculation Defense> One type of social engineering defense where the defender practices reacting to social engineering attacks so their defenses are well-rehearsed.
+<Integer Overflow> A type of memory injection where the attacker is able to circumvennt integer bounds checking by providing very large or very small numbers.
+<Integrity> One of the three fundamental security assurances. The Integrity assurance is defined by U.S. law as "guarding against improper information modification or destruction, and
+includeds ensuring information nonrepudiation and authenticity."
+<Interpreter> A component, program, or feature of a system allowing the system to accept textual statements and interpret them as commands. 
+These commands are then executed on the system. Interpreters usually have a command language consisting the vocabulary of possible commands and the options or parameters for each command. 
+<Known Plaintext Attacks> A type of attack on an encryption algorithm where the attacker Eve can both see the plaintext to feed into the algorithm and see the resulting ciphertext. 
+<LDAP Injection> A flavor of command injection where the attacker is able to send different LDAP commands to the system than the author of the program anticipated.
+<Likening Attack> A social engineering attack where an attacker appears to beling to a trusted or familiar group. 
+<McCumber Cube> A System used to classify an attack. This inclueds three dimensions: the type of asset, the information state, and the protection mechanism. 
+<Memory Control Block> A linked list in the heap controlling where individual chuncks of memory reside. Some of these chuncks may be utilized by the program, some may be free. The
+memory control block is commonly called the MCB. 
+<Memory Starvation> An application-layer attack that occurs when the demands on the memory allocator degrade performance or cause a program to malfunction. 
+<Mitigation> The process of the defender reducing the risk of an attack. 
+<Observer Function> One component of the homograph problem, the observer function represents the probability that a given human will look at two renditions and consider them the same. 
+<Penetration Tester> An individual tasked with probing external interfaces to a web server for the purpose of identifying publicly available information and estimating the overall security level of the system.
+<Phreak> Dated term referring to a cracker of the phone system.
+<Physical Defense> One type of social engineering defense where physical or logical mechanisms exist that are designed to protect information assets. 
+<PII> Personally Identifiable Information: a piece of data about a user which, singly or in combination with other PII, allows someone to uniquely identify an individual. 
+<PIN> Personal Identification Number. This is a weak form of the "What you know" type of authentication characterized by a small number of digits. The most common PIN 
+specification is 4 digits. 
+<Plaintext> Text that has yet to be encrypted with an encryption algorithm. Plaintext is human-readable. 
+<Pionter Subterfuge Vulnerability> A type of memory injection vulnerability where the attacker can have read or write access to an arbitrary location in memory
+by altering the value of a data pointer in the program. 
+<Policy Defense> One type of social engineering defense where a defender avoids attacks by following a pre-specified procedure that dictates how to handle information assets.
+<Polyalphabetic> A simple substitution encryption algorithm built from multiple Caesar Ciphers. There is more than one shift alphabet, each one used in succession. 
+<Preemption> One of the mitigation strategies involving stopping a potential attack from happeing by striking first. 
+<Prevention> One of the mitigation strategies involving increasing the difficulty of an attack by removing or reducing vulnerabilities, introducing trust boundaries, 
+or strengthening defenses.  
+<Principal> A user or interactor on a system. In most cases, a principal is human though it can be the case that a principal is an external system operating on
+a human's behalf. This is also known as a subject. 
+<Rabbit> A malware payload designed to consume resources. 
+<Rainbow Table> A password cracking technique where every possible password combination is encrypted. The attacker then needs to only find the encrypted password in the rainbow
+table to find the original plaintext password. 
+<Ransomware> A type of malware designed to hold a legitimate user's computational resources hostage until a price is paid to release the resources (called the ransom). 
+<Reaction Defense> One type of social engineering defense where the attacker recognizes an attack is under way and moves to a more alert state.
+<Reciprocation Attack> A social engineering attack where an attacker gives a gift of limited value compelling the recipient to return a gift of disproportionate value. 
+<Reflected Script Injection> A flavor of script injection where an attacker sends a malicious script to the victim through an unsuspectin intermediary computer.
+<Rendering Function> One component of the homograph problem, the rendering function is the mechanism that converts an encoding into a presentation format (rendition). 
+<Rendition> One component of the homograph problem, the rendition is the presentation of an encoding. In other words, it is what the observer sees.
+<Reproducibility> One component of the D.R.E.A.D. system describing the probability of an attack succeeding. 
+<Repudiation> The process of denying or disavowing of an action.
+<Reverse Engineering Attack> A social engineering attack where an attacker creates a problem, advertises his/her ability to solve the problem, then operates in a state of higher authority as the original problem is fixed.
+<Risk> A vulnerability paired with a threat. 
+<Rootkit> A program that attempts to hide its presence from the system. 
+<Rushing attack> A special form of a scarcity attack where the attacker places severe time constraints on a decision in the hope that the victim will make a mistake. 
+<Scarcity Attack> A social engineering attack where an attacker makes an item of limited value apepear higher in value due to an artificial perecption of short supply. 
+<Script Kiddie> A black hat hacker who is short on skill but long on desire; often uses tools developed by more experienced demigods.
+<Shell injection> A type of commmand injection where the attacker is able to send shell commands to the system command interpreter differen than the author of the program anticipated. 
+<SideJacking> A session-layer attack that occurs when an eavesdropper captures or guesses a session cookie being passed between a client and a server.
+<Smurf> A network attack where two hosts are tricked into engaging in a pointless high-bandwidth conversation. 
+<Sneaker> An individual tasked with assessing the security of a given system. 
+<Social Engineering> The act of manipulating people to achieve a level of access that they would not otherwise or normally provide. 
+<Spacker> A combination of a hakcer and a SPAMMER. A SPacker is one who breaks into computer systems for the purpose of conducting or aiding a SPAM campaign. 
+<SPAM> A marketing message sent on the internet to a large number of recipients.
+<Spoofing> Pretending to be someone other than who you really are.
+<Spyware> A program hiding on a computer for the purpose of monitoring the activities of the user. 
+<SQL Injection> A type of command injection where the SQL interpreter is used in a way different than the author anticipated.
+<Stack Segment> One of the three segments in memory (the other two being the code and the heap), the stack segment is where the local variables reside. 
+<Stack Smashing> A form of memory injection where the attacker is able to alter program execution by overwriting the funciton return pointer on the call stack. 
+<S.T.R.I.D.E> A taxonomy designed to enable software engineers to more accurately and systematically identify defects in code they are evaluation. 
+<Subscriber> Apricnipal who is permitted to have access to some or all of the system resources. The set of subscribers is a sub-set of the set of principals. 
+<Tampering> Altering or changing data in some way. 
+<Tautology Attack> A Boolean expression always evaluating to true. This can yield a type of SQL injection when the author did not intend the expression to always evaluate to true. 
+<Threat> A potential event causing the asset to devalue for the defender or come into the possession of the attacker. 
+<Threat Tree> A diagram used to illustrate the way that one potentially benign threat can lead to other potentially more severe threats. 
+<Tiger Team> A group of individuals conducting a coordinated analysis of the security of a system. 
+<Training Defense> One type of social engineering defense where the defender is educated about the types of social engineering attacks that may be employed. 
+<Trojan> A program that masquerades as another program. 
+<Union Query Attack> A type of SQL injection where multiple Boolean expressions are placed on an SQL query where only one was inteded by the query author. 
+<VAR-ARG Vulnerability> A special type of command injection where the attacker is able to overwrite memory by exploiting the way that prinf() and similar functions format strings to accommodate various data types. 
+<Verifier> The part of the authentication process that verifies if the claimant's credentials match what the system expects them to be. 
+<Virus> A type of malware capable of self-replication with human intervention. 
+<V-Table> A virtual funciton table (V-Table) is a structure containing function pointers to all the virtual funcitons in a class. 
+<V-Table Smashing> A form of memory injection similar to ARC injection where the attacker achieves an alteration in the program execution sequence by overwriting a function pointer in a v-table.
+<Vulnerability> A weaknesss in a system. If an attacker can exploit this vulnerability, then an asset may be compromised. 
+<War Driving> The process of driving through neighborhoods and local business districts looking for open wireless networks. 
+<White Hat> An individual working in the technology industry who strives to uphold the law, provide security assurances to users, and curtail the efforts of black hatters. 
+<Worm> A program designed to self-replicate without human interventioin. 
+<XSS> Cross Site Scripting. ANother name for reflected script injection. 
+
 

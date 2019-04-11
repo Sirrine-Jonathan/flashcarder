@@ -49,6 +49,7 @@
          border:1px solid black;
          text-align: left;
          padding: 3%;
+	    height: 150px;
       }
    </style>
 </head>
@@ -79,7 +80,7 @@
       </div>
    </div>
 <script>
-
+	
    // local copy of term definitions map
    let termDefMap = {};
    window.onload = () => {
@@ -260,10 +261,21 @@
          break;
          case 'Space':
             flipCard();
+	    break;
+	    case 'ArrowUp':
+		  side = 'definition';
+		  displayCard();
+         break;
+	    case 'ArrowDown':
+		  side = 'term';
+		  displayCard();
          break;
          case 'KeyQ':
             document.getElementById('container').style.display = 'flex';
             document.getElementById('cardFlipper').style.display = 'none';
+	    break;
+	    case 'KeyR':
+		  run();
          break;
       }
    });
